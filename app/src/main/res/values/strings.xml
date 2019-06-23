@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Sports</string>
+
+    <string name="error">Ha ocurrido un error</string>
 </resources>

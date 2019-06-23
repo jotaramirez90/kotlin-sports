@@ -7,7 +7,8 @@ import retrofit2.http.GET
 interface SportsAPI {
 
     companion object {
-        private const val SPORTS_PATH = "bins/66851"
+        const val BASE_URL = "https://api.myjson.com"
+        private const val SPORTS_PATH = "/bins/66851"
     }
 
     @GET(SPORTS_PATH)

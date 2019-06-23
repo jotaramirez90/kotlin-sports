@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion rootProject.ext.compile_sdk
@@ -23,14 +24,22 @@ android {
 }
 
 dependencies {
+    implementation project(':data')
+
     def applicationDependencies = rootProject.ext.mainApplication
 
-    implementation applicationDependencies.kotlin
-    api applicationDependencies.appCompat
-    api applicationDependencies.design
-    api applicationDependencies.cardView
-    api applicationDependencies.recyclerView
-    api applicationDependencies.constraintLayout
+    implementation applicationDependencies.appCompat
+    implementation applicationDependencies.design
+    implementation applicationDependencies.cardView
+    implementation applicationDependencies.recyclerView
+    implementation applicationDependencies.constraintLayout
+
+    implementation applicationDependencies.dagger
+    kapt applicationDependencies.daggerCompiler
+
+    implementation applicationDependencies.gson
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

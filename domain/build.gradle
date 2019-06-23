@@ -3,8 +3,8 @@ apply plugin: 'kotlin'
 dependencies {
     def applicationDependencies = rootProject.ext.mainApplication
 
-    implementation applicationDependencies.kotlin
-    implementation applicationDependencies.kotlinCoroutines
+    api applicationDependencies.kotlin
+    api applicationDependencies.kotlinCoroutines
 }
 
 sourceCompatibility = "8"
