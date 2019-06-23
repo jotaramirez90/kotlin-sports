@@ -1,0 +1,11 @@
+apply plugin: 'kotlin'
+
+dependencies {
+    def applicationDependencies = rootProject.ext.mainApplication
+
+    implementation applicationDependencies.kotlin
+    implementation applicationDependencies.kotlinCoroutines
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"

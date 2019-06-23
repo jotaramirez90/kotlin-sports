@@ -1,0 +1,62 @@
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+ext {
+    //Kotlin libraries
+    kotlinCoroutines_version = '1.2.1'
+
+    //Android libraries
+    appCompat_version = '28.0.0'
+    constraintLayout_version = '1.1.3'
+    dagger_version = '2.18'
+    retrofit_version = '2.3.0'
+
+    //Test libraries
+    junit_version = '4.12'
+    robolectric_version = '3.8'
+    mockito_version = '2.19.0'
+    mockitoKotlin_version = '1.6.0'
+    retrofitMock_version = '2.3.0'
+    okhttp3Mock_version = '3.9.1'
+    powermock_version = '2.0.0-beta.5'
+    assertj_version = '1.1.0'
+    kluent_version = '1.14'
+
+    mainApplication = [
+            kotlin                : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            kotlinCoroutines      : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutines_version",
+
+            supportV4             : "com.android.support:support-v4:$appCompat_version",
+            appCompat             : "com.android.support:appcompat-v7:$appCompat_version",
+            design                : "com.android.support:design:$appCompat_version",
+            cardView              : "com.android.support:cardview-v7:$appCompat_version",
+            recyclerView          : "com.android.support:recyclerview-v7:$appCompat_version",
+            constraintLayout      : "com.android.support.constraint:constraint-layout:$constraintLayout_version",
+
+            dagger                : "com.google.dagger:dagger:$dagger_version",
+            daggerCompiler        : "com.google.dagger:dagger-compiler:$dagger_version",
+
+            retrofit              : "com.squareup.retrofit2:retrofit:$retrofit_version",
+            retrofitGson          : "com.squareup.retrofit2:converter-gson:$retrofit_version",
+    ]
+
+    test = [
+            kotlinTest        : "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version",
+            junit             : "junit:junit:$junit_version",
+            robolectric       : "org.robolectric:robolectric:$robolectric_version",
+            mockito           : "org.mockito:mockito-core:$mockito_version",
+            mockitoKotlin     : "com.nhaarman:mockito-kotlin:$mockitoKotlin_version",
+            retrofitMock      : "com.squareup.retrofit2:retrofit-mock:$retrofitMock_version",
+            okhttp3Mock       : "com.squareup.okhttp3:mockwebserver:$okhttp3Mock_version",
+            powermockCore     : "org.powermock:powermock-core:$powermock_version",
+            powermockJUnit    : "org.powermock:powermock-module-junit4:$powermock_version",
+            powermockJUnitRule: "org.powermock:powermock-module-junit4-rule:$powermock_version",
+            powermockApi      : "org.powermock:powermock-api-mockito2:$powermock_version",
+            assertj           : "com.squareup.assertj:assertj-android:$assertj_version",
+            kluent            : "org.amshove.kluent:kluent:$kluent_version"
+    ]
+}
